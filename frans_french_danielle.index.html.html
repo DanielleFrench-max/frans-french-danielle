@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frans | French — Français à la carte avec Danielle</title>
+  <meta name="description" content="Frans en French op maat met Danielle. Persoonlijke Franse lessen, examenvoorbereiding, grammatica, woordenschat en spreekvaardigheid. Contactlessen of online lessen.">
+  <meta name="keywords" content="Frans, French, Franse les, French lessons, Franse lessen, French teacher, Frans leren, Franse bijles, examen Frans, online Franse les, Danielle Hontoir">
+  <meta name="author" content="Danielle Hontoir">
+  <meta property="og:title" content="Frans | French — Français à la carte avec Danielle">
+  <meta property="og:description" content="Persoonlijke Franse lessen op maat, online of in persoon.">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --navy: #102d5a;
+      --navy-dark: #0a2144;
+      --red: #e52b32;
+      --cream: #faf7f1;
+      --soft-blue: #f3f6fb;
+      --soft-red: #fff5f5;
+      --text: #202a38;
+      --muted: #647084;
+      --white: #ffffff;
+      --border: #e7ebf1;
+      --shadow: 0 18px 50px rgba(16, 45, 90, .10);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin-inline: auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .flag {
+      width: 42px;
+      height: 28px;
+      display: inline-flex;
+      flex: 0 0 auto;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 2px 7px rgba(0,0,0,.12);
+    }
+
+    .flag span { flex: 1; }
+    .flag .blue { background: #172d70; }
+    .flag .white { background: #fff; }
+    .flag .red { background: #ed2939; }
+
+    .brand-text {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.35rem, 2.3vw, 2rem);
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+    .brand-text strong { font-weight: 700; }
+    .brand-text em {
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: 1.15em;
+      font-weight: 400;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      color: var(--navy);
+      font-size: .94rem;
+    }
+
+    nav a {
+      position: relative;
+      padding: 10px 0;
+      transition: color .2s ease;
+    }
+
+    nav a:hover { color: var(--red); }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 0;
+      height: 2px;
+      background: var(--red);
+      transition: width .2s ease;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    .language-switch {
+      display: flex;
+      border: 1px solid var(--navy);
+      border-radius: 7px;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .lang-btn {
+      border: 0;
+      background: white;
+      color: var(--navy);
+      padding: 8px 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    .mobile-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: var(--navy);
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(circle at 88% 25%, rgba(229,43,50,.12), transparent 26%),
+        linear-gradient(135deg, #f8fafc 0%, #fff 58%, #fff7f7 100%);
+      border-bottom: 4px solid var(--red);
+    }
+
+    .hero-inner {
+      min-height: 485px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 55px;
+      padding: 65px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      font-size: .88rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--red);
+    }
+
+    h1 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    h1 em {
+      color: var(--navy);
+      font-weight: 400;
+    }
+
+    .hero-title-accent {
+      display: block;
+      color: var(--red);
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: .58em;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+
+    .hero-copy {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      color: var(--navy);
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .hero-copy .english {
+      display: block;
+      margin-top: 7px;
+      font-style: italic;
+      font-size: .88em;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 9px;
+      padding: 13px 21px;
+      font-weight: 750;
+      border: 1px solid transparent;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 24px rgba(16,45,90,.15);
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .button-primary:hover { background: var(--navy-dark); }
+
+    .button-secondary {
+      background: white;
+      color: var(--navy);
+      border-color: #ccd5e2;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 26px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 6px;
+      background: linear-gradient(to right, #172d70 33.33%, white 33.33%, white 66.66%, var(--red) 66.66%);
+    }
+
+    .hero-card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: 1.7rem;
+      margin-bottom: 14px;
+    }
+
+    .hero-card p { color: var(--muted); }
+
+    .mini-list {
+      list-style: none;
+      margin-top: 20px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-list li {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+    }
+
+    .check {
+      color: var(--red);
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    /* Sections */
+    section { padding: 82px 0; }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading .kicker {
+      color: var(--red);
+      text-transform: uppercase;
+      font-size: .78rem;
+      letter-spacing: .16em;
+      font-weight: 800;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height: 1.15;
+      margin: 9px 0 13px;
+    }
+
+    .section-heading p { color: var(--muted); }
+
+    .language-panels {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .language-panel {
+      padding: 34px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 38px rgba(16,45,90,.06);
+    }
+
+    .language-panel.nl { background: var(--soft-blue); }
+    .language-panel.en { background: var(--soft-red); }
+
+    .language-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    .language-panel h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: 1.6rem;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .language-panel p { margin-bottom: 16px; }
+
+    .service-list {
+      list-style: none;
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+    }
+
+    .service-list li {
+      display: flex;
+      gap: 9px;
+      font-size: .95rem;
+    }
+
+    /* Expertise */
+    .expertise {
+      background: var(--cream);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 27px 22px;
+      box-shadow: 0 8px 25px rgba(16,45,90,.05);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      font-size: 1.25rem;
+      margin-bottom: 17px;
+    }
+
+    .card:nth-child(even) .icon { background: var(--red); }
+
+    .card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: 1.25rem;
+      margin-bottom: 7px;
+    }
+
+    .card p { color: var(--muted); font-size: .93rem; }
+
+    /* CTA */
+    .contact-section { padding-top: 75px; }
+
+    .contact-box {
+      background: var(--navy);
+      color: white;
+      border-radius: 25px;
+      padding: 38px 44px;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr auto;
+      gap: 30px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-box::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -90px;
+      width: 230px;
+      height: 230px;
+      border: 25px solid rgba(255,255,255,.06);
+      border-radius: 50%;
+    }
+
+    .contact-box h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+      line-height: 1.2;
+      margin-bottom: 7px;
+    }
+
+    .contact-box p { color: rgba(255,255,255,.82); }
+
+    .contact-details {
+      display: grid;
+      gap: 8px;
+      font-size: .96rem;
+    }
+
+    .contact-details a:hover { color: #ffd8da; }
+
+    .contact-box .button {
+      background: white;
+      color: var(--navy);
+      white-space: nowrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 75px;
+      padding: 25px 0 30px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .footer-flag {
+      display: flex;
+      width: 62px;
+      height: 4px;
+      margin: 13px auto 0;
+    }
+
+    .footer-flag span { flex: 1; }
+    .footer-flag .blue { background: #172d70; }
+    .footer-flag .white { background: #ddd; }
+    .footer-flag .red { background: var(--red); }
+
+    /* Language visibility */
+    body[data-lang="nl"] .english-content { display: none !important; }
+    body[data-lang="en"] .dutch-content { display: none !important; }
+
+    .both-language-note {
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 1050px) {
+      nav { gap: 15px; }
+      .topbar { flex-wrap: wrap; padding: 12px 0; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { max-width: 650px; }
+      .cards { grid-template-columns: 1fr 1fr; }
+      .contact-box { grid-template-columns: 1fr 1fr; }
+      .contact-box .button { justify-self: start; }
+    }
+
+    @media (max-width: 820px) {
+      .mobile-toggle { display: block; }
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 8px 0 14px;
+      }
+      nav.open { display: flex; }
+      nav a { width: 100%; padding: 9px 0; }
+      .topbar { min-height: 72px; }
+      .language-switch { margin-left: auto; }
+      .language-panels { grid-template-columns: 1fr; }
+      .service-list { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      section { padding: 60px 0; }
+      .brand-text { font-size: 1.15rem; }
+      .flag { width: 35px; height: 24px; }
+      .hero-inner { padding: 48px 0; gap: 35px; }
+      .hero-card { padding: 25px; }
+      .language-panel { padding: 25px; }
+      .cards { grid-template-columns: 1fr; }
+      .contact-box { grid-template-columns: 1fr; padding: 30px 25px; }
+      .contact-box .button { justify-self: stretch; }
+      .hero-actions .button { width: 100%; }
+    }
+  </style>
+</head>
+
+<body data-lang="nl">
+
+<header>
+  <div class="container topbar">
+    <a class="brand" href="#home" aria-label="Frans French — Français à la carte avec Danielle">
+      <span class="flag" aria-hidden="true">
+        <span class="blue"></span><span class="white"></span><span class="red"></span>
+      </span>
+      <span class="brand-text">
+        <strong>Frans | French.</strong> <em>Français à la carte</em> avec Danielle
+      </span>
+    </a>
+
+    <button class="mobile-toggle" aria-label="Menu openen" aria-expanded="false">☰</button>
+
+    <nav id="mainNav">
+      <a href="#home" data-nl="Home" data-en="Home">Home</a>
+      <a href="#about" data-nl="Over Danielle" data-en="About Danielle">Over Danielle</a>
+      <a href="#lessons" data-nl="Frans op maat" data-en="French lessons">Frans op maat</a>
+      <a href="#expertise" data-nl="Waarom Danielle?" data-en="Why Danielle?">Waarom Danielle?</a>
+      <a href="#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    </nav>
+
+    <div class="language-switch" aria-label="Taalkeuze">
+      <button class="lang-btn active" data-lang="nl">NL</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div>
+        <div class="eyebrow">Français à la carte</div>
+
+        <h1>
+          <span class="dutch-content">Welkom!</span>
+          <span class="english-content">Welcome!</span>
+          <span class="hero-title-accent">French • Français • Confidence</span>
+        </h1>
+
+        <p class="hero-copy">
+          <span class="dutch-content">
+            Frans leren op jouw tempo, op jouw manier, met vertrouwen.
+          </span>
+          <span class="english-content">
+            Learn French at your own pace, in your own way, with confidence.
+          </span>
+          <span class="english dutch-content">
+            <span class="english">Apprendre le français à votre rythme, à votre manière, en toute confiance.</span>
+          </span>
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">
+            <span class="dutch-content">Plan een kennismakingsgesprek →</span>
+            <span class="english-content">Schedule an introductory conversation →</span>
+          </a>
+          <a class="button button-secondary" href="#lessons">
+            <span class="dutch-content">Ontdek de mogelijkheden</span>
+            <span class="english-content">Discover the lessons</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>
+          <span class="dutch-content">Frans, helemaal op maat</span>
+          <span class="english-content">French, tailored to you</span>
+        </h2>
+
+        <p class="dutch-content">
+          Geen standaardformule. Samen bepalen we waaraan jij wilt werken en welke aanpak het beste bij jou past.
+        </p>
+        <p class="english-content">
+          No one-size-fits-all formula. Together, we focus on what matters to you and find the approach that suits you best.
+        </p>
+
+        <ul class="mini-list">
+          <li><span class="check">✓</span><span class="dutch-content">Contactlessen of online lessen</span><span class="english-content">In-person or online lessons</span></li>
+          <li><span class="check">✓</span><span class="dutch-content">Woordenschat & grammatica</span><span class="english-content">Vocabulary & grammar</span></li>
+          <li><span class="check">✓</span><span class="dutch-content">Examenvoorbereiding</span><span class="english-content">Exam preparation</span></li>
+          <li><span class="check">✓</span><span class="dutch-content">Meer zelfvertrouwen in het spreken</span><span class="english-content">Greater confidence speaking French</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-heading">
+        <div class="kicker">À votre service</div>
+        <h2>
+          <span class="dutch-content">Frans verbeteren, oefenen en met vertrouwen spreken</span>
+          <span class="english-content">Improve your French and speak with confidence</span>
+        </h2>
+        <p>
+          <span class="dutch-content">Persoonlijke begeleiding voor volwassenen, afgestemd op jouw niveau, behoeften en doelen.</span>
+          <span class="english-content">Personalised guidance for adults, tailored to your level, needs and goals.</span>
+        </p>
+      </div>
+
+      <div class="language-panels">
+        <article class="language-panel nl">
+          <div class="language-label">🇧🇪 Nederlands</div>
+          <h3>Wil je je Frans verbeteren, oefenen of met meer vertrouwen spreken?</h3>
+          <p>Heb je nood aan extra ondersteuning bij woordenschat of grammatica? Wil je je voorbereiden op een specifiek examen, je Frans onderhouden of eindelijk je spreekangst overwinnen?</p>
+          <p>Dan help ik je graag verder.</p>
+          <p>Als <strong>licentiate in de Romaanse filologie</strong> en met <strong>40 jaar ervaring in het volwassenenonderwijs</strong>, bied ik persoonlijke begeleiding die afgestemd is op jouw niveau, doelstellingen en behoeften.</p>
+          <p>Mijn doel? Jou op een aangename en doeltreffende manier vooruithelpen en ervoor zorgen dat je met meer vertrouwen Frans durft te spreken.</p>
+
+          <ul class="service-list">
+            <li>✓ Contactlessen</li>
+            <li>✓ Voorbereiding op een examen</li>
+            <li>✓ Online lessen</li>
+            <li>✓ Spreekvaardigheid & conversatie</li>
+            <li>✓ Woordenschat & grammatica</li>
+            <li>✓ Meer zelfvertrouwen spreken</li>
+          </ul>
+        </article>
+
+        <article class="language-panel en">
+          <div class="language-label">🇬🇧 English</div>
+          <h3>Have you always wanted to learn French?</h3>
+          <p>Would you like to <strong>improve or practise your French</strong>? Perhaps there are specific areas of <strong>vocabulary or grammar</strong> that you would like to strengthen.</p>
+          <p>Would you like to prepare for a <strong>specific exam</strong>, or simply overcome your <strong>fear of speaking French</strong>?</p>
+          <p>As a <strong>graduate in Roman Languages and Literature</strong>, I would be delighted to help you.</p>
+          <p>With <strong>40 years of experience teaching adults</strong>, I offer personalised guidance tailored to your <strong>needs, level and goals</strong> — and help you make real progress with confidence.</p>
+
+          <ul class="service-list">
+            <li>✓ In-person lessons</li>
+            <li>✓ Exam preparation</li>
+            <li>✓ Online lessons</li>
+            <li>✓ Speaking & conversation</li>
+            <li>✓ Vocabulary & grammar</li>
+            <li>✓ Greater confidence speaking French</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise" id="lessons">
+    <div class="container">
+      <div class="section-heading">
+        <div class="kicker">Pourquoi Danielle?</div>
+        <h2>
+          <span class="dutch-content">Frans op jouw maat</span>
+          <span class="english-content">French lessons that fit you</span>
+        </h2>
+        <p>
+          <span class="dutch-content">Ervaring, persoonlijke aandacht en flexibiliteit in één aanpak.</span>
+          <span class="english-content">Experience, personal attention and flexibility in one approach.</span>
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">🎓</div>
+          <h3><span class="dutch-content">Ervaring & expertise</span><span class="english-content">Experience & expertise</span></h3>
+          <p><span class="dutch-content">Licentiate Romaanse filologie en 40 jaar ervaring in het volwassenenonderwijs.</span><span class="english-content">Graduate in Roman Languages and Literature with 40 years of experience teaching adults.</span></p>
+        </article>
+
+        <article class="card">
+          <div class="icon">♡</div>
+          <h3><span class="dutch-content">Persoonlijke aanpak</span><span class="english-content">Personalised approach</span></h3>
+          <p><span class="dutch-content">Lessen volledig afgestemd op jouw niveau, doelen en interesses.</span><span class="english-content">Lessons tailored to your level, goals and interests.</span></p>
+        </article>
+
+        <article class="card">
+          <div class="icon">💻</div>
+          <h3><span class="dutch-content">Flexibel</span><span class="english-content">Flexible</span></h3>
+          <p><span class="dutch-content">Mogelijkheid tot contactlessen of online lessen.</span><span class="english-content">Choose between in-person or online lessons.</span></p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🇫🇷</div>
+          <h3><span class="dutch-content">Resultaat & plezier</span><span class="english-content">Progress & enjoyment</span></h3>
+          <p><span class="dutch-content">Doeltreffend leren in een aangename en motiverende sfeer.</span><span class="english-content">Effective learning in a pleasant and motivating atmosphere.</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="expertise">
+    <div class="container">
+      <div class="section-heading">
+        <div class="kicker">Contact</div>
+        <h2>
+          <span class="dutch-content">Klaar om je Frans een boost te geven?</span>
+          <span class="english-content">Ready to improve your French?</span>
+        </h2>
+        <p>
+          <span class="dutch-content">Plan een vrijblijvend kennismakingsgesprek.</span>
+          <span class="english-content">Get in touch to schedule a free introductory conversation.</span>
+        </p>
+      </div>
+
+      <div class="contact-box" id="contact">
+        <div>
+          <h2>
+            <span class="dutch-content">Laten we kennismaken.</span>
+            <span class="english-content">Let's get acquainted.</span>
+          </h2>
+          <p>
+            <span class="dutch-content">We bekijken samen waar je staat, wat je wilt bereiken en hoe ik je daarbij kan helpen.</span>
+            <span class="english-content">We can discuss your level, your goals and how I can best support you.</span>
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <a href="mailto:danielle.hontoir@telenet.be">✉ &nbsp; danielle.hontoir@telenet.be</a>
+          <a href="tel:+32468141250">☎ &nbsp; 0468 14 12 50</a>
+        </div>
+
+        <a class="button" href="mailto:danielle.hontoir@telenet.be?subject=Kennismakingsgesprek%20Frans%20%2F%20French">
+          <span class="dutch-content">Neem contact op →</span>
+          <span class="english-content">Get in touch →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span class="dutch-content">© <span id="year"></span> Frans | French. Français à la carte avec Danielle — Alle rechten voorbehouden.</span>
+    <span class="english-content">© <span id="year-en"></span> Frans | French. Français à la carte avec Danielle — All rights reserved.</span>
+    <div class="footer-flag" aria-hidden="true">
+      <span class="blue"></span><span class="white"></span><span class="red"></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const body = document.body;
+  const buttons = document.querySelectorAll(".lang-btn");
+  const nav = document.getElementById("mainNav");
+  const mobileToggle = document.querySelector(".mobile-toggle");
+
+  function setLanguage(lang) {
+    body.dataset.lang = lang;
+    document.documentElement.lang = lang;
+
+    buttons.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+      btn.setAttribute("aria-pressed", btn.dataset.lang === lang ? "true" : "false");
+    });
+
+    const navLinks = document.querySelectorAll("nav a[data-nl]");
+    navLinks.forEach(link => {
+      link.textContent = lang === "nl" ? link.dataset.nl : link.dataset.en;
+    });
+
+    localStorage.setItem("siteLanguage", lang);
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+  });
+
+  mobileToggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    mobileToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    mobileToggle.textContent = open ? "✕" : "☰";
+  });
+
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      mobileToggle.setAttribute("aria-expanded", "false");
+      mobileToggle.textContent = "☰";
+    });
+  });
+
+  const savedLanguage = localStorage.getItem("siteLanguage");
+  setLanguage(savedLanguage === "en" ? "en" : "nl");
+
+  const year = new Date().getFullYear();
+  document.getElementById("year").textContent = year;
+  document.getElementById("year-en").textContent = year;
+</script>
+
+</body>
+</html>
